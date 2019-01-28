@@ -25,14 +25,13 @@ const createStar = async () => {
   App.setStatus("New Star Owner is " + account + ".");
 }
 
-// Add a function lookUp to Lookup a star by ID using tokenIdToStarInfo()
 const findStar = async () => {
   const instance = await StarNotary.deployed();
   const id = document.getElementById("findStarId").value;
   const starInfo = await instance.lookUptokenIdToStarInfo(id, {from: account});
   App.setStar(starInfo);
 }
-//
+
 
 const App = {
   start: function () {

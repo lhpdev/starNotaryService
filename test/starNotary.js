@@ -63,14 +63,11 @@ let accounts;
     assert.equal(balanceOfUser2BeforeTransaction.sub(balanceAfterUser2BuysStar), starPrice)
   });
 
-  // Write Tests for:
-
-  // 1) The token name and token symbol are added properly.
   it('gets contract name and symbol correctly', async() => {
     assert.equal(await instance.getTokenContractName.call(), 'GalaxyToken')
     assert.equal(await instance.getTokenContractSymbol.call(), 'GLX')
   });
-  // 2) 2 users can exchange their stars.
+
   it('lets users exchange their stars', async() => {
     let user1 = accounts[1]
     let user2 = accounts[2]
@@ -85,7 +82,6 @@ let accounts;
     assert.equal(await instance.ownerOf.call(tokenIdUser2), user1)
   });                                  
 
-  // 3) Stars Tokens can be transferred from one address to another.
   it('lets transfer start token from one address to another', async() => {
     let user1 = accounts[1]
     let user2 = accounts[2]
