@@ -63,11 +63,6 @@ let accounts;
     assert.equal(balanceOfUser2BeforeTransaction.sub(balanceAfterUser2BuysStar), starPrice)
   });
 
-  it('gets contract name and symbol correctly', async() => {
-    assert.equal(await instance.getTokenContractName.call(), 'GalaxyToken')
-    assert.equal(await instance.getTokenContractSymbol.call(), 'GLX')
-  });
-
   it('lets users exchange their stars', async() => {
     let user1 = accounts[1]
     let user2 = accounts[2]
