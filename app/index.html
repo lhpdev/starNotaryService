@@ -11,13 +11,20 @@
   <hr>
 
   <br>
-    <h1>Create a Star</h1>
-    <br><label for="starName">Star Name:</label><input type="text" id="starName"></input>
-    <br><label for="starId">Star ID:</label><input type="text" id="starId"></input>
-    <br><br><button id="createStar" onclick="App.createStar()">Create Star</button>
-    <br><br>
-    <br>
-
+    <div>
+      <h1>Create a Star</h1>
+      <br><label for="starName">Star Name:</label><input type="text" id="starName"></input>
+      <br><label for="starId">Star ID:</label><input type="text" id="starId"></input>
+      <br><br><button id="createStar" onclick="App.createStar()">Create Star</button>
+    </div>
+    <br><br><br>
+    <div>
+      <h1>Find a Star</h1>
+      <br><label for="findStarId">Star ID:</label><input type="text" id="findStarId"></input>
+      <br><br><button id="findStar" onclick="App.findStar()">Find a Star</button>
+      <p>Star Name:</p><textarea id="starInfo"></textarea>
+    </div>
+    <br><br><br>
     <span id="status"></span>
 
 <!--Add an input box and a button to Lookup a star by ID using tokenIdToStarInfo-->
